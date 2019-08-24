@@ -94,10 +94,12 @@ export class ResultService {
                     else{
                         const index = Math.floor(rng() * availableUnique.length);
                         const unique = availableUnique.splice(index, 1);
-                        characterClass.classes.unique = unique[0] || null;
+                        if (unique[0]){
+                            characterClass.classes.unique = unique[0] || null;
 
-                        const existingIndex = existingClasses.unique.findIndex(x => x.id === unique[0].id);
-                        existingClasses.unique.splice(existingIndex, 1);
+                            const existingIndex = existingClasses.unique.findIndex(x => x.id === unique[0].id);
+                            existingClasses.unique.splice(existingIndex, 1);
+                        }
                     }
                 }
             }
@@ -148,6 +150,7 @@ export class ResultService {
     private characterCanGetClass(char: CharacterClassResult, newClass: BeginnerClass | IntermediateClass | AdvancedClass | MasterClass,
                                  route: Route){
         for (const requirement of newClass.requires){
+            debugger;
             switch (requirement){
                 case "female":
                     if (char.character.gender !== "female"){

@@ -184,6 +184,8 @@
 			"name": "Priest",
 			"requires": [],
 			"viableUpgrades": [
+                9,
+                10,
 				11
 			]
 		}
