@@ -17,7 +17,7 @@ export class ResultsComponent implements OnInit {
     constructor(private location: Location) { }
 
     ngOnInit() {
-        const domain = "https://tro.moe/three-houses-randomizer";
+        const domain = "https://tro.moe/three-houses-randomizer/";
         // tslint:disable-next-line: max-line-length
         const params = `?route=${this.result.input.route.id}&viable=${this.result.input.flags.withClassTrees}&unique=${this.result.input.flags.includeSpecialClasses}&seed=${this.result.input.seed}`;
 
