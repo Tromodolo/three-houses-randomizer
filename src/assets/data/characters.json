@@ -1,0 +1,349 @@
+[
+    {
+        "id": 1,
+		"name": "Byleth",
+		"gender": "dynamic",
+		"availableOnRoutes": [
+			0
+		],
+		"uniqueClasses": [
+            1
+        ],
+        "forcedDeployOn": [
+            0, 1, 2, 3
+        ]
+	},
+	{
+        "id": 1,
+		"name": "Claude",
+		"gender": "male",
+		"availableOnRoutes": [
+			0
+		],
+		"uniqueClasses": [
+			2, 3
+        ],
+        "forcedDeployOn": [
+            0
+        ]
+	},
+	{
+        "id": 2,
+		"name": "Dimitri",
+		"gender": "male",
+		"availableOnRoutes": [
+			1
+		],
+		"uniqueClasses": [
+			4,	5
+        ],
+        "forcedDeployOn": [
+            1
+        ]
+	},
+	{
+        "id": 3,
+		"name": "Edelgard",
+		"gender": "female",
+		"availableOnRoutes": [
+			2,	3
+		],
+		"uniqueClasses":[
+			6,	7
+        ],
+        "forcedDeployOn": [
+            2
+        ]
+    },
+    {
+        "id": 4,
+		"name": "Hilda",
+		"gender": "female",
+		"availableOnRoutes": [
+			0, 1
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    },
+    {
+        "id": 5,
+		"name": "Lorenz",
+		"gender": "male",
+		"availableOnRoutes": [
+			0, 1, 2, 3
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    },
+    {
+        "id": 6,
+		"name": "Lysithea",
+		"gender": "female",
+		"availableOnRoutes": [
+			0, 1, 2, 3
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    },
+    {
+        "id": 7,
+		"name": "Raphael",
+		"gender": "male",
+		"availableOnRoutes": [
+			0, 1, 2, 3
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    },
+    {
+        "id": 8,
+		"name": "Ignatz",
+		"gender": "male",
+		"availableOnRoutes": [
+			0, 1, 2, 3
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    },
+    {
+        "id": 9,
+		"name": "Marianne",
+		"gender": "female",
+		"availableOnRoutes": [
+			0, 1, 2, 3
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    },
+    {
+        "id": 10,
+		"name": "Leonie",
+		"gender": "female",
+		"availableOnRoutes": [
+			0, 1, 2, 3
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    },
+    {
+        "id": 11,
+		"name": "Dedue",
+		"gender": "male",
+		"availableOnRoutes": [
+			1
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    },
+    {
+        "id": 12,
+		"name": "Ingrid",
+		"gender": "female",
+		"availableOnRoutes": [
+			0, 1, 2, 3
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    },
+    {
+        "id": 13,
+		"name": "Felix",
+		"gender": "male",
+		"availableOnRoutes": [
+			0, 1, 2, 3
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    },
+    {
+        "id": 14,
+		"name": "Sylvain",
+		"gender": "male",
+		"availableOnRoutes": [
+			0, 1, 2, 3
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    },
+    {
+        "id": 15,
+		"name": "Mercedes",
+		"gender": "female",
+		"availableOnRoutes": [
+			0, 1, 2, 3
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    },
+    {
+        "id": 16,
+		"name": "Annette",
+		"gender": "female",
+		"availableOnRoutes": [
+			0, 1, 2, 3
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    },
+    {
+        "id": 17,
+		"name": "Ashe",
+		"gender": "male",
+		"availableOnRoutes": [
+			0, 1, 2, 3
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    },
+    {
+        "id": 18,
+		"name": "Hubert",
+		"gender": "male",
+		"availableOnRoutes": [
+			2
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    },
+    {
+        "id": 19,
+		"name": "Petra",
+		"gender": "female",
+		"availableOnRoutes": [
+			0, 1, 2, 3
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    },
+    {
+        "id": 20,
+		"name": "Caspar",
+		"gender": "male",
+		"availableOnRoutes": [
+			0, 1, 2, 3
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    },
+    {
+        "id": 21,
+		"name": "Linhardt",
+		"gender": "male",
+		"availableOnRoutes": [
+			0, 1, 2, 3
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    },
+    {
+        "id": 22,
+		"name": "Dorothea",
+		"gender": "female",
+		"availableOnRoutes": [
+			0, 1, 2, 3
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    },
+    {
+        "id": 23,
+		"name": "Ferdinand",
+		"gender": "male",
+		"availableOnRoutes": [
+			0, 1, 2, 3
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    },
+    {
+        "id": 24,
+		"name": "Bernadetta",
+		"gender": "female",
+		"availableOnRoutes": [
+			0, 1, 2, 3
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    },
+    {
+        "id": 25,
+		"name": "Flayn",
+		"gender": "female",
+		"availableOnRoutes": [
+			0, 1, 3
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    },
+    {
+        "id": 26,
+		"name": "Seteth",
+		"gender": "male",
+		"availableOnRoutes": [
+			0, 1, 3
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    },
+    {
+        "id": 27,
+		"name": "Cyril",
+		"gender": "male",
+		"availableOnRoutes": [
+			0, 1, 3
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    },
+    {
+        "id": 28,
+		"name": "Shamir",
+		"gender": "female",
+		"availableOnRoutes": [
+			0, 1, 3
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    },
+    {
+        "id": 29,
+		"name": "Catherine",
+		"gender": "female",
+		"availableOnRoutes": [
+			0, 1, 3
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    },
+    {
+        "id": 30,
+		"name": "Alois",
+		"gender": "male",
+		"availableOnRoutes": [
+			0, 1, 3
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    },
+    {
+        "id": 31,
+		"name": "Manuela",
+		"gender": "female",
+		"availableOnRoutes": [
+			0, 1, 3
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    }
+    ,
+    {
+        "id": 32,
+		"name": "Hanneman",
+		"gender": "male",
+		"availableOnRoutes": [
+			0, 1, 3
+		],
+		"uniqueClasses":[],
+        "forcedDeployOn": []
+    }
+]

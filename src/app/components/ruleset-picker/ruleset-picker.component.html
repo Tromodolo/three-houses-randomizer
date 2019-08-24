@@ -1,0 +1,62 @@
+<div class="flex flex-col justify-center align-center">
+    <div class="flex mb4 m-2">
+        <div class="w-1/2">
+            <div class="px-3 mb-6 md:mb-0">
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="route">
+                    Route
+                </label>
+                <div class="relative">
+                    <select [(ngModel)]="ruleset.route" (change)="updateRuleset()" [compareWith]="compareRoutes"
+                        class="block appearance-none w-full bg-gray-200 border border-gray-200 text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="route">
+                        <option *ngFor="let route of routes" [ngValue]="route">
+                            {{route.name}}
+                        </option>
+                    </select>
+                    <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
+                        <svg class="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/></svg>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="w-1/2">
+            <h1 class="uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">Rules</h1>
+            <div class="md:flex md:items-center mb-6">
+                <div class=""></div>
+                <label class="block text-gray-500 font-bold">
+                    <input class="mr-2 leading-tight" type="checkbox" [(ngModel)]="ruleset.flags.withClassTrees" (change)="updateRuleset()">
+                    <span class="text-sm">
+                        Viable class upgrades (disabled means completely random classes)
+                    </span>
+                </label>
+            </div>
+            <div class="md:flex md:items-center mb-6">
+                <div class=""></div>
+                <label class=" block text-gray-500 font-bold">
+                    <input class="mr-2 leading-tight" type="checkbox" [(ngModel)]="ruleset.flags.includeSpecialClasses" (change)="updateRuleset()">
+                    <span class="text-sm">
+                        Include unique classes
+                    </span>
+                </label>
+            </div>
+            <!-- <div class="md:flex md:items-center mb-6">
+                <div class="md:w-1/3"></div>
+                <label class="md:w-2/3 block text-gray-500 font-bold">
+                    <input class="mr-2 leading-tight" type="checkbox">
+                    <span class="text-sm">
+                        Pick characters
+                    </span>
+                </label>
+            </div>              -->
+        </div>
+    </div>
+    <div class="mb-4">
+        <label class="block text-gray-700 text-sm font-bold mb-2" for="seed">
+            Custom Seed (Optional)
+        </label>
+        <input class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="seed" type="text" placeholder="Seed" [(ngModel)]="ruleset.seed" (change)="updateRuleset()">
+    </div>
+    <button class="mx-auto w-1/2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" (click)="continue()">
+        Continue
+    </button>
+</div>

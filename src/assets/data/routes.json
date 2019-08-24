@@ -1,0 +1,26 @@
+[
+	{
+		"id": 0,
+        "name": "Golden Deer",
+        "mainCharacter": 0,
+		"darkSeals": 4
+	},
+	{
+		"id": 1,
+        "name": "Blue Lions",
+        "mainCharacter": 1,
+		"darkSeals": 4
+	},
+	{
+		"id": 2,
+        "name": "Black Eagles",
+        "mainCharacter": 2,
+		"darkSeals": 3
+	},
+	{
+		"id": 3,
+        "name": "Church of Seiros",
+        "mainCharacter": 2,
+		"darkSeals": 4
+	}
+]

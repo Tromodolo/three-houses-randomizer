@@ -1,0 +1,6 @@
+<div class="w-4/5 mx-auto flex p-6 bg-white rounded-lg border-solid border-4 border-gray-700">
+    <div [ngSwitch]="status" class="w-full">
+        <ruleset-picker *ngSwitchCase="'rules'" (continuePressed)="continue($event)"></ruleset-picker>
+        <randomizer-results *ngSwitchCase="'results'" [result]="result" [back]="reset"></randomizer-results>
+    </div>
+</div>
