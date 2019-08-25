@@ -204,6 +204,7 @@
 			"name": "Hero",
 			"requires": [],
 			"viableUpgrades": [
+                0,
 				2
 			]
 		},
@@ -229,7 +230,8 @@
 			"name": "Warrior",
 			"requires": [],
 			"viableUpgrades": [
-				2
+                2,
+                4
 			]
 		},
 		{

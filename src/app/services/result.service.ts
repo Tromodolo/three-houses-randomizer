@@ -123,6 +123,7 @@ export class ResultService {
 
                 const viableMaster = existingClasses.master
                     .filter(x => advanced.viableUpgrades.includes(x.id) && this.characterCanGetClass(characterClass, x, ruleset.route));
+                    console.log(viableMaster);
                 const master = viableMaster[Math.floor(rng() * viableMaster.length)];
                 characterClass.classes.master = master;
             }
@@ -144,6 +145,7 @@ export class ResultService {
             res.characters.push(characterClass);
         }
 
+        console.log(res);
         return res;
     }
 
