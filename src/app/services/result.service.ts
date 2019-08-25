@@ -150,7 +150,6 @@ export class ResultService {
     private characterCanGetClass(char: CharacterClassResult, newClass: BeginnerClass | IntermediateClass | AdvancedClass | MasterClass,
                                  route: Route){
         for (const requirement of newClass.requires){
-            debugger;
             switch (requirement){
                 case "female":
                     if (char.character.gender !== "female"){
