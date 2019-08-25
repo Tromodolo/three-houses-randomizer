@@ -36,7 +36,7 @@ export class ResultService {
             }
         }
         else {
-            const forcedDeploy = existingCharacters.filter(x => x.forcedDeployOn.includes(ruleset.route.id));
+            const forcedDeploy = characters.filter(x => x.forcedDeployOn.includes(ruleset.route.id));
             randomizedCharacters.push(...forcedDeploy);
 
             for (let i = 0; i < 10 - forcedDeploy.length; i++){
@@ -72,34 +72,18 @@ export class ResultService {
 
             if (ruleset.flags.includeSpecialClasses){
                 // Check if character has available unique classes OR dancer exists
-                if (character.uniqueClasses.length > 0 || existingClasses.unique.find(x => x.id === 0)){
-                    const dancer = existingClasses.unique.find(x => x.id === 0);
-
+                if (character.uniqueClasses.length > 0){
                     const availableUnique = [
                         ...character.uniqueClasses.map(x => existingClasses.unique.find(y => y.id === x)),
                     ];
 
-                    if (dancer){
-                        availableUnique.push(dancer);
-                    }
+                    const index = Math.floor(rng() * availableUnique.length);
+                    const unique = availableUnique.splice(index, 1);
+                    if (unique[0]){
+                        characterClass.classes.unique = unique[0] || null;
 
-                    if (availableUnique.length === 1){
-                        if (rng() >= 0.33){
-                            characterClass.classes.unique = availableUnique[0];
-
-                            const index = existingClasses.unique.findIndex(x => x.id === availableUnique[0].id);
-                            existingClasses.unique.splice(index, 1);
-                        }
-                    }
-                    else{
-                        const index = Math.floor(rng() * availableUnique.length);
-                        const unique = availableUnique.splice(index, 1);
-                        if (unique[0]){
-                            characterClass.classes.unique = unique[0] || null;
-
-                            const existingIndex = existingClasses.unique.findIndex(x => x.id === unique[0].id);
-                            existingClasses.unique.splice(existingIndex, 1);
-                        }
+                        const existingIndex = existingClasses.unique.findIndex(x => x.id === unique[0].id);
+                        existingClasses.unique.splice(existingIndex, 1);
                     }
                 }
             }
@@ -123,7 +107,6 @@ export class ResultService {
 
                 const viableMaster = existingClasses.master
                     .filter(x => advanced.viableUpgrades.includes(x.id) && this.characterCanGetClass(characterClass, x, ruleset.route));
-                    console.log(viableMaster);
                 const master = viableMaster[Math.floor(rng() * viableMaster.length)];
                 characterClass.classes.master = master;
             }
@@ -145,7 +128,21 @@ export class ResultService {
             res.characters.push(characterClass);
         }
 
-        console.log(res);
+        // This is a mess im tired dont look at this part
+        const dancer = existingClasses.unique.find(x => x.id === 0);
+
+        const charactersWithoutUnique = res.characters.filter(x => !x.classes.unique);
+        const randomCharacter = charactersWithoutUnique[Math.floor(rng() * charactersWithoutUnique.length)];
+
+        for (const i in charactersWithoutUnique){
+            if (charactersWithoutUnique[i]){
+                if (charactersWithoutUnique[i].character.id === randomCharacter.character.id){
+                    charactersWithoutUnique[i].classes.unique = dancer;
+                }
+            }
+        }
+
+
         return res;
     }
 
