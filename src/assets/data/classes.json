@@ -196,7 +196,8 @@
 			"name": "Swordmaster",
 			"requires": [],
 			"viableUpgrades": [
-				1
+                0,
+                1
 			]
 	    },
 		{
